@@ -1,0 +1,8 @@
+;Chip Settings
+#chip 12F683,8
+#config OSC=INTRC_OSC_NOCLKOUT
+
+start:
+PulseOut GPIO.0, 1000 ms
+Goto start
+

@@ -1,0 +1,14 @@
+;Chip Settings
+#chip 12F683,8
+#config OSC=INTRC_OSC_NOCLKOUT
+
+;Defines (Constants)
+#define out GPIO.0
+
+start:
+Set out On
+Wait 1000 ms
+Set out Off
+Wait 500 ms
+Goto start
+

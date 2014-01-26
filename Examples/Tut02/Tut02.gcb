@@ -1,0 +1,37 @@
+;Chip Settings
+#chip 12F683,8
+#config OSC=INTRC_OSC_NOCLKOUT
+
+;Variables
+Dim out As byte
+
+out = b'00000001'
+start:
+ShiftLeft
+back:
+ShiftRight
+Goto start
+
+Sub Write
+	GPIO = out
+	If out <> b'00001000' Then
+		Wait 80 ms
+	End If
+End Sub
+
+Sub ShiftLeft
+	Write
+	out = out*2
+	If out <> b'00100000' Then
+		Goto start
+	End If
+End Sub
+
+Sub ShiftRight
+	Write
+	out = out/2
+	If out <> b'00000001' Then
+		Goto back
+	End If
+End Sub
+
