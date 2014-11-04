@@ -6,7 +6,7 @@ Slenduino
 </a>
 </div>
 <br>
-Author: Orlando Cosimo.<br>
+Author: Cosimo Orlando.<br>
 Blog: http://creativityslashdesign.tk/
 <br>
 Development Board (based on PIC12F683).
